@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>libanvl.depot.commandline</AssemblyName>
+    <RootNamespace>libanvl</RootNamespace>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(Configuration)'=='Debug' ">
+      <PropertyGroup>
+        <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <Optimize>false</Optimize>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(Configuration)'=='Release' ">
+      <PropertyGroup>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <Optimize>true</Optimize>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <PropertyGroup Label="Package">
+    <Authors>libanvl</Authors>
+    <Product>libanvl.dotnet</Product>
+    <Description>Private, local package cache for dotnet.</Description>
+    <Copyright>The authors and contributors of the libanvl.depot project.</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/libanvl/depot</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Label="PDB">
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21308.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\libanvl.Depot.Core\libanvl.Depot.Core.csproj" />
+  </ItemGroup>
+
+</Project>
