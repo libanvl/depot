@@ -34,6 +34,9 @@
     <RepositoryUrl>https://github.com/libanvl/depot</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>depot</ToolCommandName>
   </PropertyGroup>
 
   <PropertyGroup Label="PDB">

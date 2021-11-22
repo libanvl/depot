@@ -17,9 +17,15 @@ command line wrapper for libanvl.depot.core
   * Source Link enabled
 * NuGet packages from CI builds are available on the [libanvl GitHub feed](https://github.com/libanvl/depot/packages/)
 
-## Features
+## Install
 
-- [ ] depot
+Depot tool can be installed as a dotnet tool:
+
+```
+dotnet tool install --tool-path c:\dotnet-tools --prerelease libanvl.depot.commandline
+```
+
+Run it using `depot.exe`
 
 ## Examples
 
